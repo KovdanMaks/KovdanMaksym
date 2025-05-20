@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Резюме - Ковданя Максима</title>
-    <link rel="stylesheet" href="C:\Users\kovda\lab_2\style.css">
+  <meta charset="UTF-8">
+  <title>Резюме</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Ковдань Максим</h1>
 
-<h2>Контактна інформація Ковдань Максим </h2>
-<p>м.Львів | +380224541122 | kovdanmaksym@gmail.com</p>
+<div class="container">
+  <!-- Ліва колонка -->
+  <div class="left">
+    <img src="pngwing.png" alt="Фото" style="width:100px; border-radius:50%;">
+    <h2>Резюме</h2>
 
+    <h3>Про мене</h3>
+    <p>Вивчаю Англійську, Пайтон(Django)</p>
 
-<h2>Освіта</h2>
-<ul>
-    <li>Національний університет «Львівська політехніка», Кібербезпека та захист інформації, 2022-2026</li>
-</ul>
+    <h3>Контакти</h3>
+    <p>Львів, Україна<br>
+      kovdan2004@gmail.com<br>
+      +380 922 344 566</p>
 
-<h2>Досвід роботи</h2>
-<ul>
-    <li>
-        <p>Відсутній</p>
-    </li>
-</ul>
+    <h3>Освіта</h3>
+    <p>2022–2026: НУ “Львівська політехніка”, Кібербезпека</p>
 
-<h2>Навички</h2>
-<ul>
-    <li>Основи HTML, структура веб-сторінок</li>
-    <li>Базові навички django</li>
-    <li>Операційні системи (Windows)</li>
-    <li>Основи кібербезпеки</li>
-    <li>Досвідчений користувач Excel</li>
-    <li>Досвідчений користувач Word</li>
-</ul>
+    <h3>Навички</h3>
+    <div class="skills">
+      <span>Python</span>
+      <span>HTML</span>
+    </div>
+  </div>
 
-<h2>Знання мов</h2>
-<ul>
-    <li>Англійська — в процесі вивчення, наразі A2</li>
-    <li>Українська — Рідна</li>
-</ul>
+  <!-- Права колонка -->
+  <div class="right">
+    <h3>Досвід роботи</h3>
+    <p>Відсутній</p>
 
+    <section>
+      <h3>Відгуки</h3>
+      <ul id="comments"></ul>
+    </section>
+
+    <!-- Кнопка для модального вікна -->
+    <button id="open-modal">Залишити відгук</button>
+  </div>
+</div>
+
+<footer>
+  <div id="storage-info"></div>
+  <button id="toggle-theme">Перемкнути тему</button>
+</footer>
+
+<!-- Модальне вікно -->
+<div id="feedback-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-btn" onclick="document.getElementById('feedback-modal').classList.add('hidden')">×</button>
+    <h2>Форма зворотного зв'язку</h2>
+    <form action="https://formspree.io/f/xpwdnrlj" method="POST">
+      <label>Ім’я:<br> <input type="text" name="name" required></label><br>
+      <label>Email:<br> <input type="email" name="email" required></label><br>
+      <label>Телефон:<br> <input type="tel" name="phone" required></label><br>
+      <label>Повідомлення:<br><textarea name="message" rows="4" required></textarea></label><br>
+      <button type="submit">Відправити</button>
+    </form>
+  </div>
+</div>
+
+<!-- Скрипт наприкінці -->
+<script src="scripts.js"></script>
 
 </body>
 </html>
